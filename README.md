@@ -68,7 +68,7 @@ export default {
 ```vue
 <SmartTable :custom="true">
   <template slot-scope="scope">
-    <Card :data="scope.$data"/>
+    <div v-for="(item, index) in scope.$data" :key="index">{{item}}</div>
   </template>
 </SmartTable>
 ```
