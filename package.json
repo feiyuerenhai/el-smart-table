@@ -1,7 +1,7 @@
 {
   "name": "el-smart-table",
   "library": "SmartTable",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "smart table for vuejs & element-ui",
   "author": "454570466@qq.com",
   "private": false,

@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { Table, Pagination } from "element-ui"
+import { Table, Pagination, Message } from "element-ui"
 import fetch from "./fetch"
 
 const noop = () => {}
@@ -75,12 +75,16 @@ export default {
       // 默认实现如下，可以覆盖此方法
       // 它关注的是取到的数据如何使用，比如从哪里取total和data
       type: Function,
-      default: (response, intendedPageSize, intendedPageNo) => ({
-        data: (response.data && response.data.result) || [],
-        total: (response.data && response.data.total) || 0,
-        pageSize: intendedPageSize,
-        pageNo: intendedPageNo
-      })
+      default: (response, intendedPageSize, intendedPageNo) => {
+        const { status, msg, data } = response
+        if (!status) Message.error(msg)
+        return {
+          data: (data && data.result) || [],
+          total: (data && data.total) || 0,
+          pageSize: intendedPageSize,
+          pageNo: intendedPageNo
+        }
+      }
     },
     custom: {
       // 完全自定义展示的开关，嵌套组件要使用作用域插槽 <template slot-scope="scope"><div>{{scope.data}}</div></template>
