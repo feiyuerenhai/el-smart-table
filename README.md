@@ -6,7 +6,7 @@
 
 ## 🚀 Why
 
-在同类型的业务场景中，列表往往具有许多共性特征，我们对内部数据进行隔离，抽象出了smart-table组件，它能让使用者（在最理想的情况下），只需配置好数据接口的url即可快速创建表格。
+在同类型的业务场景中，列表往往具有许多共性特征，我们对内部数据进行隔离，抽象出了smart-table组件，它能让使用者，（在最理想的情况下）只需要配置好数据接口的url即可快速创建列表。
 
 ```vue
 <template>
@@ -39,6 +39,9 @@ export default {
         pageNo: intendedPageNo
       }
     },
+    loading(is){
+      // UI loading
+    }
   }
 } 
 </script>
