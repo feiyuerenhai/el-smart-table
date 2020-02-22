@@ -1,7 +1,7 @@
 {
   "name": "el-smart-table",
   "library": "SmartTable",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "smart table for vuejs & element-ui",
   "author": "454570466@qq.com",
   "private": false,
@@ -15,10 +15,10 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/feiyuerenhai/el-smart-table",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/feiyuerenhai/el-smart-table"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
