@@ -12,7 +12,7 @@
 <template>
     <SmartTable ref="smart-table" url="path/to/url" :before-fetch="beforeFetch" :after-fetch="afterFetch" :auto="true" :loading="loading">
         <TableColumn label="姓名" prop="name"></TableColumn>
-				<TableColumn label="年龄" prop="age"></TableColumn>
+        <TableColumn label="年龄" prop="age"></TableColumn>
     </SmartTable>
 </template>
 
@@ -64,8 +64,8 @@ export default {
 
 ```vue
 <SmartTable :custom="true">
-	<template slot-scope="scope">
-		<Card :data="scope.$data"/>
+  <template slot-scope="scope">
+    <Card :data="scope.$data"/>
   </template>
 </SmartTable>
 ```
